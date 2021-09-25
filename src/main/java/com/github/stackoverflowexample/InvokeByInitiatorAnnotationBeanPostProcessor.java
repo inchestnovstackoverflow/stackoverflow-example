@@ -50,7 +50,7 @@ public class InvokeByInitiatorAnnotationBeanPostProcessor implements BeanPostPro
         Object obj = BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
 
         if (obj instanceof Initiator) {
-            handlers.forEach(((Initiator) obj)::registerEventHandler);
+            handlers.forEach(((Initiator) obj)::registerInitiatorHandler);
         }
 
         return obj;

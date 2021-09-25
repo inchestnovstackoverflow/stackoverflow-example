@@ -12,7 +12,7 @@ public class InitiatorImpl implements Initiator {
     private List<InitiatorHandler> handlers = new ArrayList<>();
 
     @Override
-    public void registerEventHandler(InitiatorHandler handler) {
+    public void registerInitiatorHandler(InitiatorHandler handler) {
         handlers.add(handler);
     }
 

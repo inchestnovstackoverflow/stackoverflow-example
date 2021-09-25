@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = InitiatorConfiguration.class)
-class EventPublisherTest {
+class InitiatorTest {
 
     @Autowired
     private Initiator initiator;
@@ -21,7 +21,7 @@ class EventPublisherTest {
     private Invoker invoker;
 
     @Test
-    void standardEventPublish() {
+    void doInvokeTest() {
         HashMap<String, Object> params = new HashMap<>();
         initiator.doInvoke(params);
         Mockito.verify(invoker).invoke(params);
